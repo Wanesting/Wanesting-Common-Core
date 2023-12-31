@@ -1,0 +1,35 @@
+# The overall format is standard TOML format, v0.5.0.
+# Find more information on toml format here:  https://github.com/toml-lang/toml
+modLoader="javafml"
+loaderVersion="${loader_version_range}"
+
+# Review your options at https://choosealicense.com/. All rights reserved is the default copyright stance, and is thus the default here.
+license="${mod_license}"
+issueTrackerURL="https://github.com/Wanesting/{$mod_repo}}/issues"
+[[mods]]
+    modId="${mod_id}"
+    version="${mod_version}"
+    displayName="${mod_name}"
+    # A URL to query for updates for this mod. See the JSON update specification https://docs.minecraftforge.net/en/latest/misc/updatechecker/
+    #updateJSONURL="https://change.me.example.invalid/updates.json" #optional
+    displayURL="https://github.com/Wanesting/${mod_repo}"
+    logoFile="wanesting.png"
+    ##credits="${mod_authors}"
+    authors="${mod_authors}"
+
+description='''${mod_description}'''
+[[dependencies.${mod_id}]]
+    modId="forge"
+    mandatory=true
+    versionRange="${forge_version_range}" #mandatory
+    ordering="NONE"
+    side="BOTH"
+[[dependencies.${mod_id}]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="${minecraft_version_range}"
+    ordering="NONE"
+    side="BOTH"
+
+#[features.${mod_id}]
+#openGLVersion="[3.2,)"
